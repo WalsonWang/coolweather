@@ -5,12 +5,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.ChooseAreaActivity"
-            android:label="@string/app_name">
+            android:label="酷我天气">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
