@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import walson.tcl.coolweather.R;
+import walson.tcl.coolweather.service.AutoUpdateService;
 import walson.tcl.coolweather.util.HttpCallbackListener;
 import walson.tcl.coolweather.util.HttpUtil;
 import walson.tcl.coolweather.util.Utility;
@@ -69,6 +70,8 @@ public class WeatherActivity extends Activity implements View.OnClickListener {
         currentDateText.setText(prefs.getString("current_data", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
+        Intent i = new Intent(this, AutoUpdateService.class);
+        startService(i);
     }
         /*
         *   SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
